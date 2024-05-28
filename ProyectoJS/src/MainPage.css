@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html, body{
+    height: 100%;
+}
+.Container {
+    height: 100vh;
+    display: flex;
+}
+.section_left{
+    width: 20%;
+    background-color: rgb(100, 97, 97);
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    max-height: 100%;
+}
+h1{
+    color: rgb(226, 131, 115);
+    font-size: 2vw;
+    margin-left: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h3{
+    color: rgb(235, 233, 229);
+    margin-left: 1vw;
+    font-size: 1.2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.section_left div {
+    background-color: rgb(48, 43, 43);
+    height: 17%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    border-radius: 1vw;
+}
+
+.section_right{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 80%;
+}
+.text{
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.section_left div:hover {
+    background-color: rgb(156, 152, 155); /* Cambia el color al pasar el mouse */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+    transform: scale(1.06); /* Escala ligeramente el div al pasar el mouse */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Agrega una sombra al div */
+}
