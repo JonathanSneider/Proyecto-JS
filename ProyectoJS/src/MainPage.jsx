@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './MainPage.css'; 
 
+
+
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
   const [mostrarComponenteDos, setMostrarComponenteDos] = useState(false);
