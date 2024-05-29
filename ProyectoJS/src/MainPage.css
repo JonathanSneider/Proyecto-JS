@@ -12,7 +12,7 @@ html, body{
 }
 .section_left{
     width: 20%;
-    background-color: rgb(100, 97, 97);
+    background-color: rgb(131, 83, 83);
     height:100%;
     display: flex;
     justify-content: space-around;
@@ -20,7 +20,7 @@ html, body{
     max-height: 100%;
 }
 h1{
-    color: rgb(226, 131, 115);
+    color: rgb(194, 181, 7);
     font-size: 2vw;
     margin-left: 1vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -34,7 +34,7 @@ h3{
 
 }
 .section_left div {
-    background-color: rgb(48, 43, 43);
+    background-color: rgb(77, 53, 62);
     height: 17%;
     max-width: 100%;
     display: flex;
@@ -50,6 +50,8 @@ h3{
     align-self: center;
     align-items: center;
     width: 80%;
+    height: 100%;
+    background-image: url('../img/depositphotos_107290864-stock-illustration-sewing-accessories-seamless-retro-vector.jpg');
 }
 .text{
     text-align: center;
@@ -57,10 +59,15 @@ h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .text > h1 {
+    color: darkblue;
     font-size: 3.5vw;
 }
+.text > p {
+    color: rgb(163, 25, 21);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .section_left div:hover {
-    background-color: rgb(156, 152, 155); /* Cambia el color al pasar el mouse */
+    background-color: rgb(116, 71, 104); /* Cambia el color al pasar el mouse */
     transition: background-color 0.3s ease; /* Agrega una transición suave */
     transform: scale(1.06); /* Escala ligeramente el div al pasar el mouse */
     box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Agrega una sombra al div */
