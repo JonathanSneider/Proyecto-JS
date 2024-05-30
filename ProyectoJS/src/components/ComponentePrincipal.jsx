@@ -22,10 +22,10 @@ function ComponenteReact() {
         {!mostrarNuevoComponente && !mostrarComponenteDos && (
           <>
             <div className="opcion-1" onClick={startProgram}>
-              <h3>Registrar y gestionar los datos de materia prima</h3>
+              <h3>Registrar materia prima</h3>
             </div>
             <div className="opcion-2" onClick={startSecondProgram}>
-              <h3>Calcular costos de mano de obra</h3>
+              <h3>Buscar materia prima</h3>
             </div>
           </>
         )}
