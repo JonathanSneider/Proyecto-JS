@@ -1,26 +1,25 @@
 
 .spaso_left h3 {
-    color: black;
+    color: rgb(84,56,33);
   }
 .Contasiner {
     display: flex;
     height: 100%;
-}ç
-
-.section_right { 
-    display: none;
 }
+
 .spaso_left {
     display: flex;
 }
 
 .spaso_left div {
-    max-width: 40vh;
-    background-color: aqua;
-    max-height: 20vh;
-    height: 20vh;
+    background-color: rgb(243,236,212);
     text-align: center;
     margin-left:  2vw;
     border-radius: 25px;
     align-self: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.spaso_left h3{
+    padding: 10%;
 }
