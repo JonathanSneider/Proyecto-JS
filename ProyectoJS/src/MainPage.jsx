@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './MainPage.css'; 
+import './components/ComponentePrincipal.css'
 import RightSidePage from './components/RightSidePage.jsx';
+import ComponentePrincipal from './components/ComponentePrincipal.jsx';
+
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
@@ -69,7 +72,7 @@ function ComponenteReact() {
             <p>gestor de administracion de confecciones pepita</p>
           </div>
         ) : mostrarNuevoComponente ? (
-          <RightSidePage />
+          <ComponentePrincipal />
         ) : mostrarComponenteDos ? (
           <ComponenteDos />
         ) : mostrarComponenteTres ? (

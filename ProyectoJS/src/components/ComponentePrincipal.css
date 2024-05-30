@@ -1,0 +1,26 @@
+
+.spaso_left h3 {
+    color: black;
+  }
+.Contasiner {
+    display: flex;
+    height: 100%;
+}ç
+
+.section_right { 
+    display: none;
+}
+.spaso_left {
+    display: flex;
+}
+
+.spaso_left div {
+    max-width: 40vh;
+    background-color: aqua;
+    max-height: 20vh;
+    height: 20vh;
+    text-align: center;
+    margin-left:  2vw;
+    border-radius: 25px;
+    align-self: center;
+}
