@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './MainPage.css'; 
-
-
+import RightSidePage from './components/RightSidePage.jsx';
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
@@ -70,7 +69,7 @@ function ComponenteReact() {
             <p>gestor de administracion de confecciones pepita</p>
           </div>
         ) : mostrarNuevoComponente ? (
-          <NuevoComponente />
+          <RightSidePage />
         ) : mostrarComponenteDos ? (
           <ComponenteDos />
         ) : mostrarComponenteTres ? (
@@ -81,18 +80,9 @@ function ComponenteReact() {
       </div>
     </div>
   );
-};
-
-// Componentes adicionales que podrían cargarse
-function NuevoComponente() {
-  return (
-    <div className="text">
-      <h1>Nuevo componente web</h1>
-      <p>Este es un nuevo componente que se muestra al hacer clic en la opción-1.</p>
-    </div>
-  );
 }
 
+// Componentes adicionales que podrían cargarse
 function ComponenteDos() {
   return (
     <div className="text">

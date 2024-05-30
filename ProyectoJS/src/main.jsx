@@ -6,11 +6,10 @@ import UpdateCostForm from './formularios/costoIndirecto.jsx';
 import RegisterMaterial from  './formularios/createMaterial.jsx'
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <UpdateCostForm/>
-  <RegisterMaterial/>
   </React.StrictMode>,
 )
 

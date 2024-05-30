@@ -1,0 +1,13 @@
+.right-side-page {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #c29f9f; /* Color de fondo opcional */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para separación visual */
+  }
+  @media screen and (max-width: 730px) {
+    .right-side-page {
+        width: 100%;
+    }
+  }
