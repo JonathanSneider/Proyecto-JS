@@ -4,6 +4,7 @@ import './components/ComponentePrincipal.css'
 import RightSidePage from './components/RightSidePage.jsx';
 import ComponentePrincipal from './components/ComponentePrincipal.jsx';
 
+import UpdateConstante from './components/incorporarcostos.jsx';
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
@@ -76,7 +77,7 @@ function ComponenteReact() {
         ) : mostrarComponenteDos ? (
           <ComponenteDos />
         ) : mostrarComponenteTres ? (
-          <ComponenteTres />
+          <UpdateConstante />
         ) : (
           <ComponenteCuatro />
         )}
@@ -108,6 +109,7 @@ function ComponenteCuatro() {
   return (
     <div className="text">
       <h1>Cuarto componente web</h1>
+      <h1>este es mi componente sapas</h1>
       <p>Este es otro componente que se muestra al hacer clic en la opción-4.</p>
     </div>
   );
