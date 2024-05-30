@@ -1,0 +1,19 @@
+.incorporar-costos{
+    background-color: rgb(243,236,212);
+    border-radius: 50px;
+    padding: 5%;
+    margin: auto 0;
+}
+.incorporar-costos h2{
+    color: rgb(84,56,33);
+    margin-bottom: 50px;
+    font-size: 200%;
+}
+#costFrequency{
+    color: rgb(84,56,33);
+    margin-top: 10px;
+}
+.incorporar-costos button{
+    background: rgb(84,56,33);
+    background: linear-gradient(90deg, rgb(243,236,212) 0%, rgb(84,56,33) 50%, rgb(243,236,212) 100%);
+}
