@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './MainPage.css'; 
 import './components/ComponentePrincipal.css'
-import RightSidePage from './components/RightSidePage.jsx';
 import ComponentePrincipal from './components/ComponentePrincipal.jsx';
+import UpdateConstante from './components/incorporarcostos.jsx'
 
-import UpdateConstante from './components/incorporarcostos.jsx';
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
