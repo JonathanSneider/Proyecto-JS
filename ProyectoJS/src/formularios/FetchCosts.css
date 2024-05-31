@@ -1,0 +1,44 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 0;
+}
+
+.costs-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.costs-title {
+  text-align: center;
+  color: #007BFF;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.costs-list {
+  max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto;  /* Añade scroll vertical */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.cost-item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.loading, .error {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+}

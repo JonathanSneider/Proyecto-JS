@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './FetchCosts.css';
+
+
 
 const FetchCosts = () => {
   const [costs, setCosts] = useState([]);
@@ -22,19 +25,19 @@ const FetchCosts = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="error">Error: {error.message}</div>;
   }
 
   return (
-    <div>
-      <h2>Lista de Costos Indirectos</h2>
-      <ul>
+    <div className="costs-container">
+      <h2 className="costs-title">Lista de Costos Indirectos</h2>
+      <ul className="costs-list">
         {costs.map((cost) => (
-          <li key={cost.id}>
+          <li key={cost.id} className="cost-item">
             <strong>ID:</strong> {cost.id} <br/>
             <strong>Descripción:</strong> {cost.costDescription} <br/>
             <strong>Monto:</strong> {cost.costAmount} <br/>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RightSidePage from './RightSidePage.jsx';
+import SearchConstante from './SearchMaterial'
 import './ComponentePrincipal.css';
 
 function ComponenteReact() {
@@ -37,7 +38,7 @@ function ComponenteReact() {
       )}
       {mostrarComponenteDos && (
         <div className="full-screen-component">
-          <RightSidePage />
+          <SearchConstante />
         </div>
       )}
     </div>
