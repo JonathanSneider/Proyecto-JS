@@ -1,5 +1,213 @@
 import React, { useState, useEffect } from 'react';
-import './createMaterial.css'; 
+import './MaterialManager.css'; 
+const RegisterMaterial = () => {
+  const [formData, setFormData] = useState({
+    AlquilerDelLocal: '',
+    ServiciosPublicos: '',
+    MantenimientoMaquinaria: '',
+    materialProvider: '',
+    EEP: '',
+    stockUnit: '',
+    FormacionyCapacitacionEmpleados: '',
+    Seguros: '',
+    GastosOficina: '',
+    TransporteyLogostica: '',
+    CostosLicenciasyPermisos:'',
+    ServiciosLimpieza: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const {
+      AlquilerDelLocal,
+      ServiciosPublicos,
+      MantenimientoMaquinaria,
+      materialProvider,
+      EEP,
+      stockUnit,
+      FormacionyCapacitacionEmpleados,
+      Seguros,
+      GastosOficina,
+      TransporteyLogostica,
+      CostosLicenciasyPermisos,
+      ServiciosLimpieza
+    } = formData;
+
+    if (!AlquilerDelLocal || !ServiciosPublicos || !MantenimientoMaquinaria || !materialProvider || !EEP || !stockUnit || !FormacionyCapacitacionEmpleados || !Seguros || !GastosOficina || !TransporteyLogostica || !CostosLicenciasyPermisos || !ServiciosLimpieza) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://664cc9f4ede9a2b55651a257.mockapi.io/formulary', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert('Material registrado con éxito.');
+        // Reset form
+        setFormData({
+          AlquilerDelLocal: '',
+          ServiciosPublicos: '',
+          MantenimientoMaquinaria: '',
+          materialProvider: '',
+          EEP: '',
+          stockUnit: '',
+          FormacionyCapacitacionEmpleados: '',
+          Seguros: '',
+          GastosOficina: '',
+          TransporteyLogostica: '',
+          CostosLicenciasyPermisos:'',
+          ServiciosLimpieza: ''
+        });
+      } else {
+        alert('Error al registrar material: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error al registrar material.');
+    }
+  };
+
+  return (
+    <div>
+      <h2>Registrar Material</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="AlquilerDelLocal">Nombre del material:</label>
+        <input
+          type="text"
+          id="AlquilerDelLocal"
+          name="AlquilerDelLocal"
+          value={formData.AlquilerDelLocal}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="ServiciosPublicos">Descripción del material:</label>
+        <input
+          type="text"
+          id="ServiciosPublicos"
+          name="ServiciosPublicos"
+          value={formData.ServiciosPublicos}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="MantenimientoMaquinaria">Categoría:</label>
+        <input
+          type="text"
+          id="MantenimientoMaquinaria"
+          name="MantenimientoMaquinaria"
+          value={formData.MantenimientoMaquinaria}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="materialProvider">Proveedor:</label>
+        <input
+          type="text"
+          id="materialProvider"
+          name="materialProvider"
+          value={formData.materialProvider}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="EEP">Precio por unidad:</label>
+        <input
+          type="number"
+          id="EEP"
+          name="EEP"
+          value={formData.EEP}
+          onChange={handleChange}
+          step="0.01"
+          required
+        /><br /><br />
+
+        <label htmlFor="stockUnit">Cantidad en Stock:</label>
+        <input
+          type="number"
+          id="stockUnit"
+          name="stockUnit"
+          value={formData.stockUnit}
+          onChange={handleChange}
+          step="0.01"
+          required
+        /><br /><br />
+
+        <label htmlFor="FormacionyCapacitacionEmpleados">Fecha de Adquisición:</label>
+        <input
+          type="date"
+          id="FormacionyCapacitacionEmpleados"
+          name="FormacionyCapacitacionEmpleados"
+          value={formData.FormacionyCapacitacionEmpleados}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="Seguros">Fecha de vencimiento:</label>
+        <input
+          type="date"
+          id="Seguros"
+          name="Seguros"
+          value={formData.Seguros}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="GastosOficina">Ubicación en Almacén:</label>
+        <input
+          type="text"
+          id="GastosOficina"
+          name="GastosOficina"
+          value={formData.GastosOficina}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="TransporteyLogostica">Notas Adicionales:</label>
+        <input
+          type="text"
+          id="TransporteyLogostica"
+          name="TransporteyLogostica"
+          value={formData.TransporteyLogostica}
+          onChange={handleChange}
+          required
+        /><br /><br />
+
+        <label htmlFor="CostosLicenciasyPermisos,ServiciosLimpieza">Frecuencia del material:</label>
+        <select
+          id="CostosLicenciasyPermisos,ServiciosLimpieza"
+          name="CostosLicenciasyPermisos,ServiciosLimpieza"
+          value={formData.CostosLicenciasyPermisos.ServiciosLimpieza}
+          onChange={handleChange}
+          required
+        >
+          <option value="mensual">Mensual</option>
+          <option value="anual">Anual</option>
+        </select><br /><br />
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  );
+};
+
+export class WebComponente1 extends React.Component {RegisterMaterial}
 
 const CostManager = () => {
   const [formData, setFormData] = useState({

@@ -1,13 +1,13 @@
 import React from 'react'
 import './RightSidePage.css'; 
+import MaterialManager from '../formularios/MaterialManager';
 
 const RightSidePage = () => {
   return (
     <div className="right-side-page">
-      <RegisterMaterial />
+      <MaterialManager />
     </div>
   );
 };
 
 export default RightSidePage;
-
