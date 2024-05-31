@@ -1,9 +1,17 @@
-.incorporar-costos{
+.cost-manager{
+    display: flex;
+    flex-direction: row;
+}
+.incorporar-costos #cadauno{
     background-color: rgb(243, 236, 212);
     border-radius: 50px;
+    margin: 10%;
     padding: 5%;
-    margin: auto 0;
+    width: 650px;
+    max-height: 600px;
+    margin-left: 0;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    overflow-y: scroll;
 }
 .incorporar-costos h2{
     color: rgb(84,56,33);
@@ -17,4 +25,6 @@
 .incorporar-costos button{
     background: rgb(84,56,33);
     background: linear-gradient(90deg, rgb(243,236,212) 0%, rgb(84,56,33) 50%, rgb(243,236,212) 100%);
+    color: white;
+    border: none;
 }

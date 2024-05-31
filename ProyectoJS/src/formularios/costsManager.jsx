@@ -134,73 +134,78 @@ const CostManager = () => {
 
   return (
     <div className="cost-manager">
-      <h2>{isEditing ? 'Actualizar' : 'Registrar'} Costos Indirectos</h2>
-      <form onSubmit={handleSubmit}>
-        {isEditing && (
-          <>
-            <label htmlFor="AlquilerDelLocal">ID del Costo:</label>
-            <input
-              type="text"
-              id="AlquilerDelLocal"
-              name="AlquilerDelLocal"
-              value={formData.AlquilerDelLocal}
-              onChange={handleChange}
-              readOnly
-              required
-            /><br /><br />
-          </>
-        )}
+      <div id="cadauno">
+        <h2>{isEditing ? 'Actualizar' : 'Registrar'} Costos Indirectos</h2>
+        <form onSubmit={handleSubmit}>
+          {isEditing && (
+            <>
+              <label htmlFor="AlquilerDelLocal">ID del Costo:</label>
+              <input
+                type="text"
+                id="AlquilerDelLocal"
+                name="AlquilerDelLocal"
+                value={formData.AlquilerDelLocal}
+                onChange={handleChange}
+                readOnly
+                required
+              /><br /><br />
+            </>
+          )}
 
-        <label htmlFor="ServiciosPublicos">Descripción del Costo:</label>
-        <input
-          type="text"
-          id="ServiciosPublicos"
-          name="ServiciosPublicos"
-          value={formData.ServiciosPublicos}
-          onChange={handleChange}
-          required
-        /><br /><br />
+          <label htmlFor="ServiciosPublicos">Descripción del Costo:</label>
+          <input
+            type="text"
+            id="ServiciosPublicos"
+            name="ServiciosPublicos"
+            value={formData.ServiciosPublicos}
+            onChange={handleChange}
+            required
+          /><br /><br />
 
-        <label htmlFor="costAmount">Monto del Costo:</label>
-        <input
-          type="number"
-          id="costAmount"
-          name="costAmount"
-          value={formData.costAmount}
-          onChange={handleChange}
-          step="0.01"
-          required
-        /><br /><br />
+          <label htmlFor="costAmount">Monto del Costo:</label>
+          <input
+            type="number"
+            id="costAmount"
+            name="costAmount"
+            value={formData.costAmount}
+            onChange={handleChange}
+            step="0.01"
+            required
+          /><br /><br />
 
-        <label htmlFor="costFrequency">Frecuencia del Costo:</label>
-        <select
-          id="costFrequency"
-          name="costFrequency"
-          value={formData.costFrequency}
-          onChange={handleChange}
-          required
-        >
-          <option value="mensual">Mensual</option>
-          <option value="anual">Anual</option>
-        </select><br /><br />
+          <label htmlFor="costFrequency">Frecuencia del Costo:</label>
+          <select
+            id="costFrequency"
+            name="costFrequency"
+            value={formData.costFrequency}
+            onChange={handleChange}
+            required
+          >
+            <option value="mensual">Mensual</option>
+            <option value="anual">Anual</option>
+          </select><br /><br />
 
-        <button type="submit">{isEditing ? 'Actualizar' : 'Registrar'}</button>
-      </form>
+          <button type="submit">{isEditing ? 'Actualizar' : 'Registrar'}</button>
+        </form>
+      </div>
 
-      <h2>Lista de Costos Indirectos</h2>
-      <ul>
-        {costs.map((cost) => (
-          <li key={cost.id}>
-            <strong>ID:</strong> {cost.id} <br />
-            <strong>Descripción:</strong> {cost.ServiciosPublicos} <br />
-            <strong>Monto:</strong> {cost.costAmount} <br />
-            <strong>Frecuencia:</strong> {cost.costFrequency} <br />
-            <button onClick={() => handleEdit(cost)}>Editar</button>
-            <button onClick={() => handleDelete(cost.id)}>Eliminar</button>
-            <br /><br />
-          </li>
-        ))}
-      </ul>
+      <div id='cadauno'>
+        <h2>Lista de Costos Indirectos</h2>
+        <ul>
+          {costs.map((cost) => (
+            <li key={cost.id}>
+              <strong>ID:</strong> {cost.id} <br />
+              <strong>Descripción:</strong> {cost.ServiciosPublicos} <br />
+              <strong>Monto:</strong> {cost.costAmount} <br />
+              <strong>Frecuencia:</strong> {cost.costFrequency} <br />
+              <button onClick={() => handleEdit(cost)}>Editar</button>
+              <button onClick={() => handleDelete(cost.id)}>Eliminar</button>
+              <br /><br />
+            </li>
+          ))}
+        </ul>
+      </div>
+
     </div>
   );
 };
