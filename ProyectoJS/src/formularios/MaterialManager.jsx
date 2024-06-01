@@ -265,7 +265,7 @@ const MaterialManager = () => {
         <button type="submit">{isEditing ? 'Actualizar' : 'Registrar'}</button>
         {isEditing && <button type="button" onClick={resetForm}>Cancelar</button>}
       </form>
-
+      <div className='listamateriales'>
       <h2>Lista de Materiales</h2>
       <ul>
         {materials.map((material) => (
@@ -288,6 +288,7 @@ const MaterialManager = () => {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

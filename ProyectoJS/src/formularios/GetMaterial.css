@@ -1,0 +1,32 @@
+
+.formulario {
+    display: none;
+}
+
+.listamaterialess {
+    overflow-y: scroll; /* Permite el desplazamiento horizontal */
+    max-height: 600px;
+    background-color: #816969;
+    width: 39vw;
+    border-radius: 3vw;
+    margin-top: 6vh;
+}
+
+/* Estilos para la barra de desplazamiento vertical */
+.listamaterialess::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.listamaterialess::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la pista */
+    border-radius: 10px;
+}
+
+.listamaterialess::-webkit-scrollbar-thumb {
+    background: #888; /* Color de la barra de desplazamiento */
+    border-radius: 10px;
+}
+
+.listamaterialess::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
+}
