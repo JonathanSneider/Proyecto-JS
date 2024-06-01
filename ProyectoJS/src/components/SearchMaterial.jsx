@@ -1,10 +1,13 @@
 import React from 'react'
+import FetchMaterials from '../formularios/getMaterials'
 
 
 const SearchConstante = () => {
     return (
         <div className="Search-Materia">
-        <FetchCosts />
+        
+        <FetchMaterials />
+
     </div>
     );
 };
