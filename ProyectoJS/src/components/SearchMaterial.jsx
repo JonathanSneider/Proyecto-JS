@@ -1,12 +1,12 @@
 import React from 'react'
-import FetchMaterials from '../formularios/getMaterials'
+import GetMaterials from '../formularios/GetMaterials'
 
 
 const SearchConstante = () => {
     return (
         <div className="Search-Materia">
         
-        <FetchMaterials />
+        <GetMaterials />
 
     </div>
     );
