@@ -11,7 +11,12 @@
 .spaso_left {
     display: flex;
 }
-
+.spaso_left div:hover {
+    background-color: rgb(202, 196, 177); /* Cambia el color al pasar el mouse */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+    transform: scale(1.06); /* Escala ligeramente el div al pasar el mouse */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Agrega una sombra al div */
+}
 .spaso_left div {
     background-color: rgb(243,236,212);
     text-align: center;
@@ -19,6 +24,7 @@
     border-radius: 25px;
     align-self: center;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    border: solid white;
 }
 
 .spaso_left h3{
