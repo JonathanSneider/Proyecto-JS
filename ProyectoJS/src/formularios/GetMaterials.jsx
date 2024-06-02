@@ -90,7 +90,7 @@ const FetchMaterials = () => {
   }
 
   return (
-    <div className="material-manager">
+    <div className="material-manager-list">
       {editingMaterial ? (
         <EditMaterialForm
           material={editingMaterial}
@@ -103,20 +103,24 @@ const FetchMaterials = () => {
           <ul>
             {materials.map((material) => (
               <li key={material.id}>
-                <strong>ID:</strong> {material.id} <br />
-                <strong>Nombre:</strong> {material.namematerial} <br />
-                <strong>Descripción:</strong> {material.materialDescription} <br />
-                <strong>Categoría:</strong> {material.materialCategory} <br />
-                <strong>Proveedor:</strong> {material.materialProvider} <br />
-                <strong>Precio por unidad:</strong> {material.unitPrice} <br />
-                <strong>Cantidad en Stock:</strong> {material.stockUnit} <br />
-                <strong>Fecha de Adquisición:</strong> {material.purchaseDate} <br />
-                <strong>Fecha de Vencimiento:</strong> {material.expirationDate} <br />
-                <strong>Ubicación:</strong> {material.location} <br />
-                <strong>Notas:</strong> {material.materialNotes} <br />
-                <strong>Frecuencia:</strong> {material.materialFrequency} <br />
-                <button onClick={() => handleEdit(material)}>Actualizar</button>
-                <button onClick={() => handleDelete(material.id)}>Eliminar</button>
+                <div className="material-info">
+                  <strong>ID:</strong> {material.id} <br />
+                  <strong>Nombre:</strong> {material.namematerial} <br />
+                  <strong>Descripción:</strong> {material.materialDescription} <br />
+                  <strong>Categoría:</strong> {material.materialCategory} <br />
+                  <strong>Proveedor:</strong> {material.materialProvider} <br />
+                  <strong>Precio por unidad:</strong> {material.unitPrice} <br />
+                  <strong>Cantidad en Stock:</strong> {material.stockUnit} <br />
+                  <strong>Fecha de Adquisición:</strong> {material.purchaseDate} <br />
+                  <strong>Fecha de Vencimiento:</strong> {material.expirationDate} <br />
+                  <strong>Ubicación:</strong> {material.location} <br />
+                  <strong>Notas:</strong> {material.materialNotes} <br />
+                  <strong>Frecuencia:</strong> {material.materialFrequency} <br />
+                </div>
+                <div className="material-actions">
+                  <button onClick={() => handleEdit(material)}>Actualizar</button>
+                  <button onClick={() => handleDelete(material.id)}>Eliminar</button>
+                </div>
                 <br /><br />
               </li>
             ))}

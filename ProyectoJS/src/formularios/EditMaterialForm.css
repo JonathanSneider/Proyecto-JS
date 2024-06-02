@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor del formulario */
+  .edit-material-form {
+    width: 32vw;
+    max-height: 600px;
+    overflow-y: scroll;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título del formulario */
+  .edit-material-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  /* Estilos del formulario */
+  .edit-material-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilos de las etiquetas */
+  .edit-material-form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333333;
+  }
+  
+  /* Estilos de los inputs y selects */
+  .edit-material-form input[type="text"],
+  .edit-material-form input[type="number"],
+  .edit-material-form input[type="date"],
+  .edit-material-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Efectos de foco */
+  .edit-material-form input[type="text"]:focus,
+  .edit-material-form input[type="number"]:focus,
+  .edit-material-form input[type="date"]:focus,
+  .edit-material-form select:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  /* Estilos del botón */
+  .edit-material-form button[type="submit"],
+  .edit-material-form button[type="button"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .edit-material-form button[type="button"] {
+    background-color: #777777;
+  }
+  
+  /* Efectos de hover del botón */
+  .edit-material-form button[type="submit"]:hover,
+  .edit-material-form button[type="button"]:hover {
+    background-color: #003d80;
+    box-shadow: 0 6px 12px rgba(0, 91, 187, 0.3);
+  }

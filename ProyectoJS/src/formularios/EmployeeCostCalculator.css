@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #c29f9f;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor del formulario */
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #d3b5b5;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(228, 223, 223, 0.1);
+  }
+  
+  /* Título del formulario */
+  h2 {
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 5px; /* Reducimos el margen inferior */
+    color: #e2dcdc;
+    font-size: 24px; /* Disminuimos el tamaño del título */
+    font-weight: 700;
+  }
+  
+  /* Estilos del formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilos de las etiquetas */
+  label {
+    margin-bottom: 8px; /* Reducimos el margen inferior */
+    font-weight: 500;
+    color: #000000; /* Cambiamos el color del texto a blanco */
+  }
+  
+  /* Estilos de los inputs */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: calc(80% - 20px); /* Ajustamos el ancho y reducimos el espacio de los bordes */
+    padding: 10px; /* Reducimos el padding */
+    margin-bottom: 12px; /* Reducimos el margen inferior */
+    border: none;
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+    color: #6541b8;
+    font-size: 16px;
+    font-weight: 400;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Efectos de foco */
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  /* Estilos del botón */
+  button[type="submit"] {
+    width: calc(60% - 20px); /* Ajustamos el ancho y reducimos el espacio de los bordes */
+    padding: 10px; /* Reducimos el padding */
+    margin-top: 8px; /* Reducimos el margen superior */
+    margin-bottom: 20px;
+    background-color: #947dc0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Disminuimos el tamaño del texto */
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efectos de hover del botón */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 91, 187, 0.3);
+  }

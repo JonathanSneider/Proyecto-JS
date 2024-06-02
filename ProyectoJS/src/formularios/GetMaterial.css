@@ -1,32 +1,54 @@
-
-.formulario {
-    display: none;
-}
-
-.listamaterialess {
-    overflow-y: scroll; /* Permite el desplazamiento horizontal */
+.material-manager-list {
+    margin-top: 20px;
+    background-color: #a5a09a;
     max-height: 600px;
-    background-color: #816969;
-    width: 39vw;
-    border-radius: 3vw;
-    margin-top: 6vh;
-}
-
-/* Estilos para la barra de desplazamiento vertical */
-.listamaterialess::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
-}
-
-.listamaterialess::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color del fondo de la pista */
-    border-radius: 10px;
-}
-
-.listamaterialess::-webkit-scrollbar-thumb {
-    background: #888; /* Color de la barra de desplazamiento */
-    border-radius: 10px;
-}
-
-.listamaterialess::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
-}
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    width: 35vw;
+    border-radius: 2vw;
+  }
+  
+  .material-manager-list h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .material-manager-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .material-manager-list li {
+    border: 1px solid #ddd;
+    padding: 15px;
+    max-width: 20vw;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .material-manager-list li .material-info {
+    font-weight: bold;
+  }
+  
+  .material-manager-list li .material-actions button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .material-manager-list button {
+    margin-left: 6px;
+  }
+  
+  .material-manager-list li .material-actions button:hover {
+    background-color: #0056b3;
+  }

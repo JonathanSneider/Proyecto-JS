@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import './EditMaterialForm.css'; 
+
+
 
 const EditMaterialForm = ({ material, onSave, onCancel }) => {
   const [formData, setFormData] = useState({ ...material });

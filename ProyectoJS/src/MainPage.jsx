@@ -3,6 +3,7 @@ import './MainPage.css';
 import './components/ComponentePrincipal.css'
 import ComponentePrincipal from './components/ComponentePrincipal.jsx';
 import UpdateConstante from './components/incorporarcostos.jsx'
+import EmployeeCostCalculator from './formularios/EmployeeCostCalculator.jsx'
 
 
 function ComponenteReact() {
@@ -75,7 +76,7 @@ function ComponenteReact() {
         ) : mostrarNuevoComponente ? (
           <ComponentePrincipal />
         ) : mostrarComponenteDos ? (
-          <ComponenteDos />
+          <EmployeeCostCalculator />
         ) : mostrarComponenteTres ? (
           <UpdateConstante />
         ) : (
