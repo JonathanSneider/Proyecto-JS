@@ -70,6 +70,7 @@ function ComponenteReact() {
           <div className="text">
             <h1>Bienvenido</h1>
             <p>gestor de administracion de confecciones pepita</p>
+            <img src="/img/WhatsApp Image 2024-06-01 at 19.44.30_4a3acc81.jpg" alt="" />
           </div>
         ) : mostrarNuevoComponente ? (
           <ComponentePrincipal />
