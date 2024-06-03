@@ -5,10 +5,8 @@ import GetMaterials from '../formularios/GetMaterials'
 const SearchConstante = () => {
     return (
         <div className="Search-Materia">
-        
-        <GetMaterials />
-
-    </div>
+            <GetMaterials />
+        </div>
     );
 };
 

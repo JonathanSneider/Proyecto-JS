@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './MainPage.css'; 
-import './components/ComponentePrincipal.css'
+import './css/MainPage.css'; 
+import './css/ComponentePrincipal.css';
 import ComponentePrincipal from './components/ComponentePrincipal.jsx';
-import UpdateConstante from './components/incorporarcostos.jsx'
-import EmployeeCostCalculator from './formularios/EmployeeCostCalculator.jsx'
+import UpdateConstante from './components/incorporarcostos.jsx';
+import EmployeeCostCalculator from './formularios/EmployeeCostCalculator.jsx';
 
 
 function ComponenteReact() {
@@ -71,7 +71,7 @@ function ComponenteReact() {
           <div className="text">
             <h1>Bienvenido</h1>
             <p>gestor de administracion de confecciones pepita</p>
-            <img src="/img/WhatsApp Image 2024-06-01 at 19.44.30_4a3acc81.jpg" alt="" />
+            <img src="/img/logoconfeccionespepita.jpg" alt="" />
           </div>
         ) : mostrarNuevoComponente ? (
           <ComponentePrincipal />
@@ -88,23 +88,6 @@ function ComponenteReact() {
 }
 
 // Componentes adicionales que podrían cargarse
-function ComponenteDos() {
-  return (
-    <div className="text">
-      <h1>Segundo componente web</h1>
-      <p>Este es otro componente que se muestra al hacer clic en la opción-2.</p>
-    </div>
-  );
-}
-
-function ComponenteTres() {
-  return (
-    <div className="text">
-      <h1>Tercer componente web</h1>
-      <p>Este es otro componente que se muestra al hacer clic en la opción-3.</p>
-    </div>
-  );
-}
 
 function ComponenteCuatro() {
   return (
