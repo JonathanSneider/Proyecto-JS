@@ -1,13 +1,15 @@
 .material-manager-list{
     background-color: rgb(243, 236, 212);
-    border-radius: 50px;
-    margin: 10%;
+    border-radius: 50px 0px 0px 50px;
+    margin: 10% 5% 0% 0%;
     padding: 5%;
     width: 650px;
     max-height: 600px;
-    margin-left: 0;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
     overflow-y: scroll;
+    color: black;
+    border: solid white 5px;
+    scrollbar-color: rgb(84,56,33) white;
 }
 .material-manager-list button{
     background: rgb(84,56,33);
