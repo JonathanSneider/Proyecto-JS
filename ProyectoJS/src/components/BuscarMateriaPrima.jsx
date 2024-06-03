@@ -1,5 +1,6 @@
 import React from 'react'
 import GetMaterials from '../formularios/GetMaterials'
+import '../css/BuscarMateriaPrima.css';
 
 
 const SearchConstante = () => {

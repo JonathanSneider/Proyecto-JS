@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/RightSidePage.css'; 
+import '../css/RegistrarMateriaPrima.css'; 
 import MaterialManager from '../formularios/MaterialManager';
 
 const RightSidePage = () => {

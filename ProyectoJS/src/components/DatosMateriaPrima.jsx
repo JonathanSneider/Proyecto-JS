@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import RightSidePage from './RightSidePage.jsx';
-import SearchConstante from './SearchMaterial'
-import '../css/ComponentePrincipal.css';
+import RightSidePage from './RegistrarMateriaPrima.jsx';
+import SearchConstante from './BuscarMateriaPrima.jsx'
+import '../css/DatosMateriaPrima.css';
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);

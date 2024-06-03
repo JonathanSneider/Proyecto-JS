@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/InformesDetallados.css';
+import '../css/GenerarInformesDetallados.css';
 
 
 //FUNCIONES PARA SACAR LA EFICIENCIA OPERATIVA

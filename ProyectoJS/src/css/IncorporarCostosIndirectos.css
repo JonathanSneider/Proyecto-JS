@@ -12,6 +12,7 @@
     margin-left: 0;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
     overflow-y: scroll;
+    color: black;
 }
 .incorporar-costos h2{
     color: rgb(84,56,33);
@@ -24,7 +25,10 @@
 }
 .incorporar-costos button{
     background: rgb(84,56,33);
-    background: linear-gradient(90deg, rgb(243,236,212) 0%, rgb(84,56,33) 50%, rgb(243,236,212) 100%);
+    background: linear-gradient(90deg, rgba(84,56,33,1) 0%, rgba(84,56,33,1) 100%);
     color: white;
     border: none;
+    margin: 5px;
+    padding: 2px;
+    cursor:pointer;
 }

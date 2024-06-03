@@ -1,0 +1,31 @@
+.right-side-page {
+  background-color: rgb(243, 236, 212);
+  border-radius: 50px;
+  margin: 10%;
+  padding: 5%;
+  width: 650px;
+  max-height: 600px;
+  margin-left: 0;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+}
+
+.right-side-page h2{
+  color: rgb(84,56,33);
+  margin-bottom: 50px;
+  font-size: 200%;
+}
+.right-side-page button{
+  background: rgb(84,56,33);
+    background: linear-gradient(90deg, rgba(84,56,33,1) 0%, rgba(84,56,33,1) 100%);
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 2px;
+    cursor:pointer;
+}
+  @media screen and (max-width: 730px) {
+    .right-side-page {
+        width: 100%;
+    }
+  }

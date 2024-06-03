@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './css/MainPage.css'; 
-import './css/ComponentePrincipal.css';
-import ComponentePrincipal from './components/ComponentePrincipal.jsx';
-import UpdateConstante from './components/incorporarcostos.jsx';
-import EmployeeCostCalculator from './formularios/EmployeeCostCalculator.jsx';
+import ComponentePrincipal from './components/DatosMateriaPrima.jsx';
+import UpdateConstante from './components/IncorporarCostosIndirectos.jsx';
+import CostsCalc from './components/CalcularCostosManoObra.jsx';
 
 
 function ComponenteReact() {
@@ -76,7 +75,7 @@ function ComponenteReact() {
         ) : mostrarNuevoComponente ? (
           <ComponentePrincipal />
         ) : mostrarComponenteDos ? (
-          <EmployeeCostCalculator />
+          <CostsCalc />
         ) : mostrarComponenteTres ? (
           <UpdateConstante />
         ) : (

@@ -62,7 +62,7 @@ body {
   input[type="number"]:focus,
   input[type="date"]:focus,
   select:focus {
-    border-color: #0056b3;
+    border-color: rgb(84,56,33);
     outline: none;
   }
   
@@ -84,6 +84,6 @@ body {
   
   /* Efectos de hover del botón */
   button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: rgb(84,56,33);
     box-shadow: 0 6px 12px rgba(0, 91, 187, 0.3);
   }

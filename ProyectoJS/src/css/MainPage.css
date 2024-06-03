@@ -11,7 +11,7 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    background-color: #8A8678;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -28,6 +28,7 @@ html, body{
     height: 100vh;
     display: flex;
     background-image: url('../img/depositphotos_107290864-stock-illustration-sewing-accessories-seamless-retro-vector.jpg');
+    background-repeat: repeat;
     position: relative;
 }
 .Container::after{

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/incorporarcostos.css'; 
+import '../css/IncorporarCostosIndirectos.css'; 
 import CostManager from '/src/formularios/costsManager.jsx'
 
 
