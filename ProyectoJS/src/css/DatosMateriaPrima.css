@@ -30,3 +30,15 @@
 .spaso_left h3{
     padding: 10%;
 }
+
+@media screen and (max-width: 730px){
+    .spaso_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .spaso_left div{
+        margin: 10%;
+        padding: 10%;
+    }
+}

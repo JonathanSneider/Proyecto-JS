@@ -8,9 +8,9 @@ body {
   /* Contenedor del formulario */
   .container {
     width: 80%;
-    max-width: 600px;
+    max-width: 200%;
     margin: 50px auto;
-    padding: 40px;
+    padding: 5%;
     background-color: #816969;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -18,12 +18,12 @@ body {
   
   /* Título del formulario */
   h2 {
-    margin-top: 5px;
+    margin-top: 100%;
     text-align: center;
     margin-bottom: 5px; /* Reducimos el margen inferior */
     color: #ffffff;
-    font-size: 24px; /* Disminuimos el tamaño del título */
-    font-weight: 700;
+    font-size: 100%; /* Disminuimos el tamaño del título */
+    font-weight: 700%;
   }
   
   /* Estilos del formulario */
@@ -35,8 +35,8 @@ body {
   
   /* Estilos de las etiquetas */
   label {
-    margin-bottom: 8px; /* Reducimos el margen inferior */
-    font-weight: 500;
+    margin-bottom: 8%; /* Reducimos el margen inferior */
+    font-weight: 500%;
     color: #2b1818; /* Cambiamos el color del texto a blanco */
   }
   
@@ -46,14 +46,14 @@ body {
   input[type="date"],
   select {
     width: calc(80% - 20px); /* Ajustamos el ancho y reducimos el espacio de los bordes */
-    padding: 10px; /* Reducimos el padding */
-    margin-bottom: 12px; /* Reducimos el margen inferior */
+    padding: 10%; /* Reducimos el padding */
+    margin-bottom: 12%; /* Reducimos el margen inferior */
     border: none;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2% solid #000000;
     background-color: transparent;
     color: #6541b8;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 16%;
+    font-weight: 400%;
     transition: border-color 0.3s ease;
   }
   
@@ -69,16 +69,16 @@ body {
   /* Estilos del botón */
   button[type="submit"] {
     width: calc(60% - 20px); /* Ajustamos el ancho y reducimos el espacio de los bordes */
-    padding: 10px; /* Reducimos el padding */
-    margin-top: 8px; /* Reducimos el margen superior */
-    margin-bottom: 20px;
+    padding: 10%; /* Reducimos el padding */
+    margin-top: 8%; /* Reducimos el margen superior */
+    margin-bottom: 20%;
     background-color: #5900ff;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 8%;
     cursor: pointer;
-    font-size: 16px; /* Disminuimos el tamaño del texto */
-    font-weight: 600;
+    font-size: 16%; /* Disminuimos el tamaño del texto */
+    font-weight: 600%;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   

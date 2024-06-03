@@ -25,8 +25,15 @@
     padding: 2px;
     cursor:pointer;
 }
-  @media screen and (max-width: 730px) {
-    .right-side-page {
-        width: 100%;
-    }
+@media screen and (max-width: 1010px){
+  .right-side-page{
+    width: 200%;
+    margin-left: -50%;
   }
+}
+@media screen and (max-width: 730px) {
+  .right-side-page {
+      width: 100%;
+      margin-left: 0%;
+  }
+}
