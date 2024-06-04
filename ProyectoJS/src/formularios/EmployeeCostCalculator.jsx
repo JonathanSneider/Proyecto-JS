@@ -39,7 +39,7 @@ const EmployeeCostCalculator = () => {
     // Guardar datos en MockAPI
     setIsLoading(true);
     try {
-      const response = await fetch('https://664cc9f4ede9a2b55651a257.mockapi.io/formulary', {
+      const response = await fetch('https://665e64231e9017dc16efe11c.mockapi.io/employeeCost', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
