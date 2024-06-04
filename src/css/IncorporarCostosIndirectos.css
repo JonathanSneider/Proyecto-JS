@@ -35,6 +35,16 @@
     padding: 2px;
     cursor:pointer;
 }
+.cagando{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    background: linear-gradient(90deg, rgba(84,56,33,1) 0%, rgba(84,56,33,1) 100%);
+    color: white;
+    padding: 2%;
+    border-radius: 40px;
+    font-size: 500%;
+}
 @media screen and (max-width: 1650px){
     .incorporar-costos #cadauno{
         width: 100%;

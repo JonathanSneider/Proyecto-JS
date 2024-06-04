@@ -23,7 +23,7 @@ html, body{
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-image: url('../img/depositphotos_107290864-stock-illustration-sewing-accessories-seamless-retro-vector.jpg');
+    background-image: url('/img/depositphotos_107290864-stock-illustration-sewing-accessories-seamless-retro-vector.jpg');
     background-repeat: repeat;
 }
 .Container {

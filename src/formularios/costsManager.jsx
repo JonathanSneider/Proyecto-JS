@@ -209,7 +209,7 @@ const CostManager = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div class='cagando'>Cargando...</div>;
   }
 
   if (error) {
