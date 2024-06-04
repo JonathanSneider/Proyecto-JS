@@ -101,6 +101,7 @@ h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     z-index: 2;
     padding-top: 5%;
+    text-shadow: 0 0 10px rgb(84,56,33), 0 0 20px rgb(84,56,33), 0 0 30px rgb(84,56,33), 0 0 40px rgb(84,56,33);
 }
 .text img{
     border-radius: 100%;
