@@ -27,3 +27,13 @@
     color: rgb(84,56,33);
     padding: 5%;
 }
+.holamiamor section{
+    padding: 5%;
+}
+
+@media screen and (max-width: 1000px){
+    .holamiamor{
+        width: 70%;
+        margin: 10%;
+    }
+}

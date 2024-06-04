@@ -1,5 +1,6 @@
 import React from 'react';
 import './FinalInforms.jsx'
+import '../css/GenerarInformesDetallados.css'
 
 const InformeProduccion = ({
   productosTerminados,
@@ -54,37 +55,22 @@ const InformeProduccion = ({
       <h1>INFORME DE PRODUCCION</h1>
       
       <section>
-        <h2>PRODUCTIVIDAD</h2>
+        <h2>EFICIENCIA OPERATIVA</h2>
         <p>Productividad: {productividad(productosTerminados, horasProduccion)}</p>
-      </section>
-
-      <section>
-        <h2>COSTOS OPERATIVOS </h2>
         <p>Costos Operativos por Unidad: {costosOperativosUnidad(costosOperativos, productosTerminados)}</p>
-      </section>
-
-      <section>
-        <h2>Tasa de Defectos</h2>
         <p>Tasa de Defectos: {tasaDefectos(productosDefectuosos, productosFabricados)}%</p>
-      </section>
-
-      <section>
-        <h2>Producción Efectiva</h2>
         <p>Producción Efectiva: {produccionEfectiva(productosTerminados, productosDefectuosos)}</p>
-      </section>
-
-      <section>
-        <h2>Eficiencia Operativa</h2>
         <p>Eficiencia Operativa: {eficienciaOperativa(produccionEfectiva(productosTerminados, productosDefectuosos), costosOperativos)}</p>
       </section>
 
       <section>
-        <h2>Costos de Mano de Obra</h2>
+        <h2>COSTOS DE MANO DE OBRA</h2>
         <p>Salario Base Total: {salarioBaseTotal(salarioBaseHora, horasTrabajadas)}</p>
         <p>Beneficios y Prestaciones: {beneficiosPrestaciones(beneficiosPrestacionesEmpleado)}</p>
         <p>Costos Indirectos: {costosIndirectos(costosIndirectosEmpleado)}</p>
         <p>Costo de Mano de Obra: {costoDeManoDeObra(salarioBaseHora, horasTrabajadas, beneficiosPrestaciones(beneficiosPrestacionesEmpleado))}</p>
       </section>
+      
     </div>
   );
 };
