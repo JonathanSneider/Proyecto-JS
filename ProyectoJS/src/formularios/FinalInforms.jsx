@@ -1,82 +1,93 @@
-import React from 'react'
-import '../css/GenerarInformesDetallados.css';
+import React from 'react';
+import '../css/GenerarInformesDetallados.css'
 
+const InformeProduccion = ({
+  productosTerminados,
+  horasProduccion,
+  costosOperativos,
+  productosDefectuosos,
+  productosFabricados,
+  salarioBaseHora,
+  horasTrabajadas,
+  beneficiosPrestacionesEmpleado,
+  costosIndirectosEmpleado
+}) => {
 
+  const productividad = (productosTerminados, horasProduccion) => {
+    return productosTerminados / horasProduccion;
+  };
 
+  const costosOperativosUnidad = (costosOperativos, productosTerminados) => {
+    return costosOperativos / productosTerminados;
+  };
 
-//FUNCIONES PARA SACAR LA EFICIENCIA OPERATIVA
+  const tasaDefectos = (productosDefectuosos, productosFabricados) => {
+    return (productosDefectuosos / productosFabricados) * 100;
+  };
 
-function Productividad(ProductosTerminados, HorasProduccion){
-    return ProductosTerminados/HorasProduccion
-} //CALCULAR LA PRODUCTIVIDAD
+  const produccionEfectiva = (productosTerminados, productosDefectuosos) => {
+    return productosTerminados - productosDefectuosos;
+  };
 
-function CostosOperativosUnidad(CostosOperativos, ProductosTerminados){
-    return CostosOperativos/ProductosTerminados
-} // CALCULAR LOS COSTOS OPERATIVOS POR UNIDAD
+  const eficienciaOperativa = (produccionEfectiva, costosOperativos) => {
+    return produccionEfectiva / costosOperativos;
+  };
 
-function TasaDefectos(ProductosDefectuosos, ProductosFabricados){
-    return (ProductosDefectuosos/ProductosFabricados)*100
-} //CALCULAR LA TASA DE DEFECTOS
+  const salarioBaseTotal = (salarioBaseHora, horasTrabajadas) => {
+    return salarioBaseHora * horasTrabajadas; // Hay que sumar todos los salarios bases de todos los empleados
+  };
 
-function ProduccionEfectiva(ProductosTerminados, ProductosDefectuosos){
-    return ProductosTerminados-ProductosDefectuosos
-} //CALCULAR LA PRODUCCION EFECTIVA
+  const beneficiosPrestaciones = (beneficiosPrestacionesEmpleado) => {
+    return beneficiosPrestacionesEmpleado; // Hay que sumar todos los beneficios y prestaciones de todos los empleados
+  };
 
-function EficienciaOperativa(ProduccionEfectiva, CostosOperativos){
-    return ProduccionEfectiva/CostosOperativos
-}
+  const costosIndirectos = (costosIndirectosEmpleado) => {
+    return costosIndirectosEmpleado; // Hay que sumar todos los costos indirectos de todos los empleados
+  };
 
+  const costoDeManoDeObra = (salarioBaseHora, horasTrabajadas, beneficiosPrestaciones) => {
+    return (salarioBaseHora * horasTrabajadas) + beneficiosPrestaciones;
+  };
 
+  return (
+    <div>
+      <h1>Informe de Producción</h1>
+      
+      <section>
+        <h2>Productividad</h2>
+        <p>Productividad: {productividad(productosTerminados, horasProduccion)}</p>
+      </section>
 
+      <section>
+        <h2>Costos Operativos por Unidad</h2>
+        <p>Costos Operativos por Unidad: {costosOperativosUnidad(costosOperativos, productosTerminados)}</p>
+      </section>
 
-function SalarioBaseTotal(SalarioBaseHora, HorasTrabajadas){
-    return SalarioBaseHora*HorasTrabajadas //HAY QUE SUMAR TODOS LOS SALARIOS BASES DE TODOS LOS EMPLEADOS
-}
+      <section>
+        <h2>Tasa de Defectos</h2>
+        <p>Tasa de Defectos: {tasaDefectos(productosDefectuosos, productosFabricados)}%</p>
+      </section>
 
-function BeneficiosPrestaciones(BeneficiosPrestacionesEmpleado){
-    return BeneficiosPrestacionesEmpleado  //HAY QUE SUMAR TODOS LOS BENEFICIOS Y PRESTACIONES DE TODOS LOS EMPLEADOS
-}
+      <section>
+        <h2>Producción Efectiva</h2>
+        <p>Producción Efectiva: {produccionEfectiva(productosTerminados, productosDefectuosos)}</p>
+      </section>
 
-function CostosIndirectos(CostosIndirectosEmpleado){
-    return CostosIndirectosEmpleado //HAY QUE SUMAR TODOS LOS COSTOS INDIRECTOS DE TODOS LOS EMPLEADOS
-}
+      <section>
+        <h2>Eficiencia Operativa</h2>
+        <p>Eficiencia Operativa: {eficienciaOperativa(produccionEfectiva(productosTerminados, productosDefectuosos), costosOperativos)}</p>
+      </section>
 
-function CostoDeManoDeObra(SalarioBaseHora, HorasTrabajadas, BeneficiosPrestaciones){
-    return (SalarioBaseHora*HorasTrabajadas) + BeneficiosPrestaciones
-}
+      <section>
+        <h2>Costos de Mano de Obra</h2>
+        <p>Salario Base Total: {salarioBaseTotal(salarioBaseHora, horasTrabajadas)}</p>
+        <p>Beneficios y Prestaciones: {beneficiosPrestaciones(beneficiosPrestacionesEmpleado)}</p>
+        <p>Costos Indirectos: {costosIndirectos(costosIndirectosEmpleado)}</p>
+        <p>Costo de Mano de Obra: {costoDeManoDeObra(salarioBaseHora, horasTrabajadas, beneficiosPrestaciones(beneficiosPrestacionesEmpleado))}</p>
+      </section>
+    </div>
+  );
+};
 
+export default InformeProduccion;
 
-// URL del endpoint
-const url = 'https://665e64231e9017dc16efe11c.mockapi.io/employeeCost';
-
-// Realizar la solicitud fetch
-fetch(url)
-    .then(response => {
-        // Verificar si la respuesta es exitosa
-        if (!response.ok) {
-            throw new Error('Error en la solicitud: ' + response.status);
-        }
-        // Convertir la respuesta a formato JSON
-        return response.json();
-    })
-    .then(data => {
-        
-        console.log(data);
-        // Llamar a la función que suma algunos datos
-        const suma = sumarDatos(data);
-        console.log('La suma de los datos es:', suma);
-    })
-    .catch(error => {
-        // Manejar errores
-        console.error('Hubo un problema con la solicitud fetch:', error);
-    });
-
-// Función para sumar algunos datos del endpoint
-function sumarDatos(data) {
-    // Supongamos que los datos que queremos sumar están en una propiedad 'valores'
-    let suma = 0;
-    data.valores.forEach(valor => {
-        suma += valor;
-    });
-    return suma;
-}

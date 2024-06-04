@@ -3,44 +3,45 @@ import './css/MainPage.css';
 import ComponentePrincipal from './components/DatosMateriaPrima.jsx';
 import UpdateConstante from './components/IncorporarCostosIndirectos.jsx';
 import CostsCalc from './components/CalcularCostosManoObra.jsx';
+import InformeProduccion from './formularios/FinalInforms.jsx'
 
 
 function ComponenteReact() {
   const [mostrarNuevoComponente, setMostrarNuevoComponente] = useState(false);
   const [mostrarComponenteDos, setMostrarComponenteDos] = useState(false);
   const [mostrarComponenteTres, setMostrarComponenteTres] = useState(false);
-  const [mostrarComponenteCuatro, setMostrarComponenteCuatro] = useState(false);
+  const [mostrarInformeProduccion, setMostrarInformeProduccion] = useState(false);
 
   function returnpage() {
     setMostrarNuevoComponente(false);
     setMostrarComponenteDos(false);
     setMostrarComponenteTres(false);
-    setMostrarComponenteCuatro(false);
+    setMostrarInformeProduccion(false);
   }
 
   function startProgram() {
     setMostrarNuevoComponente(true);
     setMostrarComponenteDos(false);
     setMostrarComponenteTres(false);
-    setMostrarComponenteCuatro(false);
+    setMostrarInformeProduccion(false);
   }
 
   function startSecondProgram() {
     setMostrarComponenteDos(true);
     setMostrarNuevoComponente(false);
     setMostrarComponenteTres(false);
-    setMostrarComponenteCuatro(false);
+    setMostrarInformeProduccion(false);
   }
 
   function startThirdProgram() {
     setMostrarComponenteTres(true);
     setMostrarNuevoComponente(false);
     setMostrarComponenteDos(false);
-    setMostrarComponenteCuatro(false);
+    setMostrarInformeProduccion(false);
   }
 
   function startFourthProgram() {
-    setMostrarComponenteCuatro(true);
+    setMostrarInformeProduccion(true);
     setMostrarNuevoComponente(false);
     setMostrarComponenteDos(false);
     setMostrarComponenteTres(false);
@@ -66,7 +67,7 @@ function ComponenteReact() {
         </div>
       </div>
       <div className="section_right">
-        {!mostrarNuevoComponente && !mostrarComponenteDos && !mostrarComponenteTres && !mostrarComponenteCuatro ? (
+        {!mostrarNuevoComponente && !mostrarComponenteDos && !mostrarComponenteTres && !mostrarInformeProduccion ? (
           <div className="text">
             <h1>Bienvenido</h1>
             <p>gestor de administracion de confecciones pepita</p>
@@ -79,23 +80,13 @@ function ComponenteReact() {
         ) : mostrarComponenteTres ? (
           <UpdateConstante />
         ) : (
-          <ComponenteCuatro />
+          <InformeProduccion />
         )}
       </div>
     </div>
   );
 }
 
-// Componentes adicionales que podrían cargarse
 
-function ComponenteCuatro() {
-  return (
-    <div className="text">
-      <h1>Cuarto componente web</h1>
-      <h1>este es mi componente sapas</h1>
-      <p>Este es otro componente que se muestra al hacer clic en la opción-4.</p>
-    </div>
-  );
-}
 
 export default ComponenteReact;
