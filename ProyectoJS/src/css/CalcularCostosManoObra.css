@@ -24,3 +24,10 @@
     margin-bottom: 50px;
     font-size: 200%;
 }
+
+@media screen and (max-width: 1000px){
+    .costos-manoobra .container{
+        width: 70%;
+        margin: 10%;
+    }
+}

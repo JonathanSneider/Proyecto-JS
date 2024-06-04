@@ -32,3 +32,19 @@
     padding: 2px;
     cursor:pointer;
 }
+@media screen and (max-width: 1650px){
+    .incorporar-costos #cadauno{
+        width: 100%;
+        margin: 5% 1% 0% 0%;
+    }
+}
+@media screen and (max-width: 731px){
+    .cost-manager{
+        display: flex;
+        flex-direction: column;
+    }
+    .incorporar-costos #cadauno{
+        width: 100%;
+        margin: 5% 0% 0% 0%;
+    }
+}

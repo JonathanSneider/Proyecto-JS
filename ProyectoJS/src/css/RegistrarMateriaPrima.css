@@ -36,4 +36,10 @@
       width: 100%;
       margin-left: 0%;
   }
+  .material-manager-list ul li{
+    padding-right: 55%;
+  }
+  .material-manager-list .material-info {
+    width: 250%;
+}
 }
