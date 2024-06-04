@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/GenerarInformesDetallados.css'
+import './FinalInforms.jsx'
 
 const InformeProduccion = ({
   productosTerminados,
@@ -50,16 +50,16 @@ const InformeProduccion = ({
   };
 
   return (
-    <div>
-      <h1>Informe de Producción</h1>
+    <div class='holamiamor'>
+      <h1>INFORME DE PRODUCCION</h1>
       
       <section>
-        <h2>Productividad</h2>
+        <h2>PRODUCTIVIDAD</h2>
         <p>Productividad: {productividad(productosTerminados, horasProduccion)}</p>
       </section>
 
       <section>
-        <h2>Costos Operativos por Unidad</h2>
+        <h2>COSTOS OPERATIVOS </h2>
         <p>Costos Operativos por Unidad: {costosOperativosUnidad(costosOperativos, productosTerminados)}</p>
       </section>
 
