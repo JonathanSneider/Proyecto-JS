@@ -60,7 +60,7 @@ function ComponenteReact() {
           <h3>Calcular costos de mano de obra</h3>
         </div>
         <div className="opcion-3" onClick={startThirdProgram}>
-          <h3>Incorporar cossssstos indirectos</h3>
+          <h3>Incorporar costos indirectos</h3>
         </div>
         <div className="opcion-4" onClick={startFourthProgram}>
           <h3>Generar informes detallados</h3>
