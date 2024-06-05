@@ -1,79 +1,125 @@
-import React from 'react';
-import './FinalInforms.jsx'
-import '../css/GenerarInformesDetallados.css'
+import React, { useEffect, useState } from 'react';
+import './FinalInforms.jsx';
+import '../css/GenerarInformesDetallados.css';
 
-const InformeProduccion = ({
-  productosTerminados,
-  horasProduccion,
-  costosOperativos,
-  productosDefectuosos,
-  productosFabricados,
-  salarioBaseHora,
-  horasTrabajadas,
-  beneficiosPrestacionesEmpleado,
-  costosIndirectosEmpleado
-}) => {
+const InformeProduccion = () => {
+  const [datos, setDatos] = useState({
+    productividad: 0,
+    costosOperativosUnidad: 0,
+    tasaDefectos: 0,
+    produccionEfectiva: 0,
+    eficienciaOperativa: 0,
+    salarioBaseTotal: 0,
+    beneficiosPrestaciones: 0,
+    costosIndirectos: 0,
+    costoDeManoDeObra: 0
+  });
 
-  const productividad = (productosTerminados, horasProduccion) => {
-    return productosTerminados / horasProduccion;
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchDatos = async () => {
+    try {
+      const response = await fetch('https://665e64231e9017dc16efe11c.mockapi.io/InformeGeneral/1');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setDatos({
+        productividad: data.Productividad,
+        costosOperativosUnidad: data.CostosOperativos,
+        tasaDefectos: data.TasadeDefectos,
+        produccionEfectiva: data.ProduccionEfectiva,
+        eficienciaOperativa: data.EficienciaOperativa,
+        salarioBaseTotal: data.SalarioBaseTotal,
+        beneficiosPrestaciones: data.BeneficiosyPresentaciones,
+        costosIndirectos: data.CostosIndirectos,
+        costoDeManoDeObra: data.CostosdeManodeObra
+      });
+      setLoading(false);
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
+    }
   };
 
-  const costosOperativosUnidad = (costosOperativos, productosTerminados) => {
-    return costosOperativos / productosTerminados;
+  useEffect(() => {
+    fetchDatos();
+  }, []);
+
+  const guardarInforme = async (informe) => {
+    try {
+      const response = await fetch('https://665e64231e9017dc16efe11c.mockapi.io/InformesFinales', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(informe)
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al guardar el informe');
+      }
+
+      const data = await response.json();
+      console.log('Informe guardado exitosamente: ', data);
+    } catch (error) {
+      console.error("Error saving report: ", error);
+    }
   };
 
-  const tasaDefectos = (productosDefectuosos, productosFabricados) => {
-    return (productosDefectuosos / productosFabricados) * 100;
-  };
+  useEffect(() => {
+    if (!loading && !error) {
+      guardarInforme(datos);
+    }
+  }, [datos, loading, error]);
 
-  const produccionEfectiva = (productosTerminados, productosDefectuosos) => {
-    return productosTerminados - productosDefectuosos;
-  };
+  if (loading) {
+    return <div>Cargando datos...</div>;
+  }
 
-  const eficienciaOperativa = (produccionEfectiva, costosOperativos) => {
-    return produccionEfectiva / costosOperativos;
-  };
-
-  const salarioBaseTotal = (salarioBaseHora, horasTrabajadas) => {
-    return salarioBaseHora * horasTrabajadas; // Hay que sumar todos los salarios bases de todos los empleados
-  };
-
-  const beneficiosPrestaciones = (beneficiosPrestacionesEmpleado) => {
-    return beneficiosPrestacionesEmpleado; // Hay que sumar todos los beneficios y prestaciones de todos los empleados
-  };
-
-  const costosIndirectos = (costosIndirectosEmpleado) => {
-    return costosIndirectosEmpleado; // Hay que sumar todos los costos indirectos de todos los empleados
-  };
-
-  const costoDeManoDeObra = (salarioBaseHora, horasTrabajadas, beneficiosPrestaciones) => {
-    return (salarioBaseHora * horasTrabajadas) + beneficiosPrestaciones;
-  };
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
-    <div class='holamiamor'>
-      <h1>INFORME DE PRODUCCION</h1>
+    <div className='holamiamor'>
+      <h1>INFORME DE PRODUCCION <br />DEL LOTE</h1>
       
       <section>
-        <h2>EFICIENCIA OPERATIVA</h2>
-        <p>Productividad: {productividad(productosTerminados, horasProduccion)}</p>
-        <p>Costos Operativos por Unidad: {costosOperativosUnidad(costosOperativos, productosTerminados)}</p>
-        <p>Tasa de Defectos: {tasaDefectos(productosDefectuosos, productosFabricados)}%</p>
-        <p>Producción Efectiva: {produccionEfectiva(productosTerminados, productosDefectuosos)}</p>
-        <p>Eficiencia Operativa: {eficienciaOperativa(produccionEfectiva(productosTerminados, productosDefectuosos), costosOperativos)}</p>
+        <h2>PRODUCTIVIDAD</h2>
+        <p>Productividad: {datos.productividad}</p>
       </section>
 
       <section>
-        <h2>COSTOS DE MANO DE OBRA</h2>
-        <p>Salario Base Total: {salarioBaseTotal(salarioBaseHora, horasTrabajadas)}</p>
-        <p>Beneficios y Prestaciones: {beneficiosPrestaciones(beneficiosPrestacionesEmpleado)}</p>
-        <p>Costos Indirectos: {costosIndirectos(costosIndirectosEmpleado)}</p>
-        <p>Costo de Mano de Obra: {costoDeManoDeObra(salarioBaseHora, horasTrabajadas, beneficiosPrestaciones(beneficiosPrestacionesEmpleado))}</p>
+        <h2>COSTOS OPERATIVOS </h2>
+        <p>Costos Operativos por Unidad: {datos.costosOperativosUnidad}</p>
       </section>
-      
+
+      <section>
+        <h2>Tasa de Defectos</h2>
+        <p>Tasa de Defectos: {datos.tasaDefectos}%</p>
+      </section>
+
+      <section>
+        <h2>Producción Efectiva</h2>
+        <p>Producción Efectiva: {datos.produccionEfectiva}</p>
+      </section>
+
+      <section>
+        <h2>Eficiencia Operativa</h2>
+        <p>Eficiencia Operativa: {datos.eficienciaOperativa}</p>
+      </section>
+
+      <section>
+        <h2>Costos de Mano de Obra</h2>
+        <p>Salario Base Total: {datos.salarioBaseTotal}</p>
+        <p>Beneficios y Prestaciones: {datos.beneficiosPrestaciones}</p>
+        <p>Costos Indirectos: {datos.costosIndirectos}</p>
+        <p>Costo de Mano de Obra: {datos.costoDeManoDeObra}</p>
+      </section>
     </div>
   );
 };
 
 export default InformeProduccion;
-
